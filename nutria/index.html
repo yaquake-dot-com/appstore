@@ -129,8 +129,9 @@
         h.className = 'heart';
         h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
         h.style.left = Math.random() * 100 + '%';
-        h.style.animationDuration = (15 + Math.random() * 20) + 's';
-        h.style.animationDelay = (Math.random() * 20) + 's';
+        const duration = 15 + Math.random() * 20;
+        h.style.animationDuration = duration + 's';
+        h.style.animationDelay = -Math.random() * duration + 's';
         h.style.fontSize = (14 + Math.random() * 14) + 'px';
         container.appendChild(h);
     }

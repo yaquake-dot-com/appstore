@@ -146,8 +146,9 @@
         dot.textContent = '$';
         dot.style.fontSize = (14 + Math.random() * 18) + 'px';
         dot.style.left = Math.random() * 100 + '%';
-        dot.style.animationDuration = 14 + Math.random() * 18 + 's';
-        dot.style.animationDelay = Math.random() * 18 + 's';
+        const duration = 14 + Math.random() * 18;
+        dot.style.animationDuration = duration + 's';
+        dot.style.animationDelay = -Math.random() * duration + 's';
         container.appendChild(dot);
     }
 </script>
