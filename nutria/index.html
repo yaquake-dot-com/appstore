@@ -4,304 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutria Sticker Pack — Support & Privacy</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cream: #FEFAF5;
-            --warm-white: #FFFFFF;
-            --sand: #F5EDE3;
-            --peach: #FFE8D6;
-            --blush: #FFB5A7;
-            --rose: #F28482;
-            --deep-rose: #D64550;
-            --brown: #4A3728;
-            --light-brown: #8B7362;
-            --soft-shadow: 0 4px 24px rgba(74, 55, 40, 0.06);
+    <style type="text/tailwindcss">
+        @theme {
+            --color-cream: #FEFAF5;
+            --color-sand: #F5EDE3;
+            --color-peach: #FFE8D6;
+            --color-blush: #FFB5A7;
+            --color-rose: #F28482;
+            --color-deep-rose: #D64550;
+            --color-brown: #4A3728;
+            --color-light-brown: #8B7362;
+            --font-heading: 'Quicksand', sans-serif;
+            --font-body: 'Nunito', sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Nunito', sans-serif;
-            background: var(--cream);
-            color: var(--brown);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .bg-hearts {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .heart {
-            position: absolute;
-            opacity: 0.06;
-            animation: floatHeart 20s infinite linear;
-        }
-
-        @keyframes floatHeart {
+        @keyframes float-heart {
             0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
             10% { opacity: 0.06; }
             90% { opacity: 0.06; }
             100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
         }
 
-        nav {
-            position: relative;
-            z-index: 1;
-            padding: 20px 32px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .nav-logo {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            font-size: 1.4em;
-            color: var(--brown);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-logo span { font-size: 1.2em; }
-
-        nav a.nav-link {
-            color: var(--light-brown);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
-            transition: color 0.2s;
-        }
-
-        nav a.nav-link:hover { color: var(--rose); }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 40px 24px 40px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
+        @keyframes fade-in-down {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .app-icon {
-            width: 100px;
-            height: 100px;
-            border-radius: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            margin: 0 auto 18px;
-            box-shadow: 0 6px 24px rgba(242, 132, 130, 0.25);
-            transition: transform 0.3s ease;
-        }
-
-        .app-icon:hover { transform: scale(1.05) rotate(-3deg); }
-
-        h1 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 2em;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .subtitle {
-            font-size: 1.05em;
-            color: var(--light-brown);
-            font-weight: 600;
-        }
-
-        .divider {
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blush), var(--rose));
-            border-radius: 3px;
-            margin: 0 auto 30px;
-        }
-
-        .card {
-            background: var(--warm-white);
-            border-radius: 22px;
-            padding: 32px 28px;
-            margin-bottom: 18px;
-            box-shadow: var(--soft-shadow);
-            animation: fadeInUp 0.8s ease-out both;
-            text-align: left;
-        }
-
-        .card:nth-child(2) { animation-delay: 0.1s; }
-        .card:nth-child(3) { animation-delay: 0.15s; }
-        .card:nth-child(4) { animation-delay: 0.2s; }
-
-        @keyframes fadeInUp {
+        @keyframes fade-in-up {
             from { opacity: 0; transform: translateY(24px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .card h2 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.2em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card p {
-            font-size: 0.95em;
-            line-height: 1.7;
-            color: var(--light-brown);
-        }
-
-        .card a {
-            color: var(--rose);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .card a:hover { color: var(--deep-rose); }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--peach);
-            color: var(--brown);
-            padding: 5px 13px;
-            border-radius: 18px;
-            font-size: 0.82em;
-            font-weight: 700;
-            margin-top: 10px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 14px;
-        }
-
-        .feature {
-            background: var(--cream);
-            border-radius: 14px;
-            padding: 14px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .feature:hover { transform: translateY(-2px); }
-        .feature .emoji { font-size: 1.4em; margin-bottom: 4px; }
-        .feature .label { font-size: 0.82em; font-weight: 700; color: var(--brown); }
-
-        .footer {
-            text-align: center;
-            margin-top: 36px;
-            padding: 20px;
-            font-size: 0.85em;
-            color: var(--light-brown);
-            animation: fadeInUp 0.8s ease-out 0.3s both;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--light-brown);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
-            transition: color 0.2s;
-        }
-
-        .back-link:hover { color: var(--rose); }
-
-        @media (max-width: 480px) {
-            .container { padding: 30px 16px 30px; }
-            h1 { font-size: 1.7em; }
-            .card { padding: 26px 20px; }
+        .heart {
+            position: absolute;
+            opacity: 0.06;
+            animation: float-heart 20s infinite linear;
         }
     </style>
 </head>
-<body>
+<body class="bg-cream font-body text-brown min-h-screen overflow-x-hidden">
 
-<div class="bg-hearts" id="hearts"></div>
+<!-- FLOATING HEARTS -->
+<div id="hearts" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
 
-<nav>
-    <a href="../" class="nav-logo"><span>🥝</span> Kiwi Apps</a>
-    <a href="../" class="nav-link">← All Apps</a>
+<!-- NAV -->
+<nav class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 py-5 flex items-center justify-between">
+    <a href="../index.html" class="font-heading font-bold text-lg sm:text-xl text-brown no-underline flex items-center gap-2">
+        <span class="text-xl">🥝</span> Kiwi Apps
+    </a>
+    <a href="../index.html" class="text-light-brown no-underline font-semibold text-sm hover:text-rose transition-colors">← Back to Home</a>
 </nav>
 
-<div class="container">
-    <div class="header">
-        <div class="app-icon"><img src="nutria.png" alt="Nutria Sticker Pack"></div>
-        <h1>Nutria Sticker Pack</h1>
-        <p class="subtitle">Cute & romantic stickers for iMessage</p>
+<!-- CONTENT -->
+<div class="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-10">
+
+    <!-- HEADER -->
+    <div class="text-center mb-10 animate-[fade-in-down_0.8s_ease-out]">
+        <div class="w-24 h-24 sm:w-[100px] sm:h-[100px] rounded-[26px] mx-auto mb-5 shadow-[0_6px_24px_rgba(242,132,130,0.25)] overflow-hidden transition-transform duration-300 hover:scale-105 hover:-rotate-3">
+            <img src="nutria.png" alt="Nutria Sticker Pack" class="w-full h-full">
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl font-bold mb-1.5">Nutria Sticker Pack</h1>
+        <p class="text-light-brown font-semibold text-base sm:text-lg">Cute & romantic stickers for iMessage</p>
+        <a href="https://apps.apple.com/nz/app/nutria-sticker-pack/id6759588546" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 transition-all duration-200 hover:scale-105 hover:opacity-85">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-[52px]">
+        </a>
     </div>
 
-    <div class="divider"></div>
+    <!-- DIVIDER -->
+    <div class="w-12 h-[3px] bg-gradient-to-r from-blush to-rose rounded-full mx-auto mb-8"></div>
 
-    <div class="card">
-        <h2><span>💕</span> About</h2>
-        <p>Meet Nutria — an adorable little coypu ready to fill your iMessage chats with love, warmth, and cuteness! 45 hand-drawn stickers for every tender moment.</p>
-        <div class="features">
-            <div class="feature">
-                <div class="emoji">🎨</div>
-                <div class="label">45 Stickers</div>
+    <!-- ABOUT -->
+    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.1s_both]">
+        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>💕</span> About</h2>
+        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Meet Nutria — an adorable little coypu ready to fill your iMessage chats with love, warmth, and cuteness! 45 hand-drawn stickers for every tender moment.</p>
+        <div class="grid grid-cols-2 gap-2.5 mt-4">
+            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
+                <div class="text-xl mb-1">🎨</div>
+                <div class="text-xs font-bold text-brown">45 Stickers</div>
             </div>
-            <div class="feature">
-                <div class="emoji">💌</div>
-                <div class="label">Romantic</div>
+            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
+                <div class="text-xl mb-1">💌</div>
+                <div class="text-xs font-bold text-brown">Romantic</div>
             </div>
-            <div class="feature">
-                <div class="emoji">✏️</div>
-                <div class="label">Hand-drawn</div>
+            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
+                <div class="text-xl mb-1">✏️</div>
+                <div class="text-xs font-bold text-brown">Hand-drawn</div>
             </div>
-            <div class="feature">
-                <div class="emoji">💬</div>
-                <div class="label">iMessage</div>
+            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
+                <div class="text-xl mb-1">💬</div>
+                <div class="text-xs font-bold text-brown">iMessage</div>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <h2><span>📬</span> Support</h2>
-        <p>Having issues or have a suggestion? We'd love to hear from you! Reach out and we'll get back to you as soon as possible.</p>
-        <p style="margin-top: 10px;">
-            <a href="mailto:ivan.eresko@proton.me">ivan.eresko@proton.me</a>
+    <!-- SUPPORT -->
+    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.15s_both]">
+        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>📬</span> Support</h2>
+        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Having issues or have a suggestion? We'd love to hear from you! Reach out and we'll get back to you as soon as possible.</p>
+        <p class="mt-2.5">
+            <a href="mailto:ivan.eresko@proton.me" class="text-rose font-bold no-underline hover:text-deep-rose transition-colors text-sm sm:text-[0.95rem]">ivan.eresko@proton.me</a>
         </p>
     </div>
 
-    <div class="card">
-        <h2><span>🔒</span> Privacy Policy</h2>
-        <p>Nutria Sticker Pack does not collect, store, or share any personal data. The app contains no analytics, tracking, or third-party services. Your conversations remain completely private.</p>
-        <div class="badge">🛡️ Zero data collected</div>
+    <!-- PRIVACY -->
+    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.2s_both]">
+        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🔒</span> Privacy Policy</h2>
+        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Nutria Sticker Pack does not collect, store, or share any personal data. The app contains no analytics, tracking, or third-party services. Your conversations remain completely private.</p>
+        <div class="inline-flex items-center gap-1.5 bg-peach text-brown px-3.5 py-1.5 rounded-full text-xs font-bold mt-2.5">🛡️ Zero data collected</div>
     </div>
 
-    <div class="footer">
-        <p>© 2025 Nutria Sticker Pack</p>
+    <!-- FOOTER -->
+    <div class="text-center mt-9 py-5 text-sm text-light-brown animate-[fade-in-up_0.8s_ease-out_0.3s_both]">
+        <p>© <script>document.write(new Date().getFullYear())</script> Nutria Sticker Pack</p>
     </div>
 </div>
 

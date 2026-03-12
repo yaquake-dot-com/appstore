@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendah - Support and Privacy</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+            --color-cream: #f8faf8;
+            --color-soft-mint: #edf8f0;
+            --color-mint: #d9f0df;
+            --color-green: #2f7d4a;
+            --color-green-dark: #245f38;
+            --color-brown: #2f3b2e;
+            --color-light-brown: #5f6b5e;
+            --font-heading: 'Quicksand', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+        }
+
+        @keyframes fade-in-down {
+            from { opacity: 0; transform: translateY(-18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float-dot {
+            0% { transform: translateY(110vh) translateX(0); opacity: 0; }
+            10% { opacity: 0.09; }
+            90% { opacity: 0.09; }
+            100% { transform: translateY(-10vh) translateX(14px); opacity: 0; }
+        }
+
+        .dot {
+            position: absolute;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 30% 30%, #6bcf8d, #2f7d4a);
+            opacity: 0.09;
+            animation: float-dot 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-cream font-body text-brown min-h-screen overflow-x-hidden">
+
+<div id="dots" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+<nav class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-5 flex items-center justify-between">
+    <a href="../index.html" class="font-heading font-bold text-lg sm:text-xl text-brown no-underline flex items-center gap-2">
+        <span class="text-xl">🥝</span> Kiwi Apps
+    </a>
+    <a href="../index.html" class="text-light-brown no-underline font-semibold text-sm hover:text-green transition-colors">← Back to Home</a>
+</nav>
+
+<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-12">
+    <header class="text-center mb-10 animate-[fade-in-down_0.8s_ease-out]">
+        <div class="w-24 h-24 sm:w-[104px] sm:h-[104px] rounded-[26px] mx-auto mb-5 shadow-[0_8px_24px_rgba(47,125,74,0.25)] overflow-hidden transition-transform duration-300 hover:scale-105">
+            <img src="logo.png" alt="Spendah app icon" class="w-full h-full">
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl font-bold mb-1.5">Spendah</h1>
+        <p class="text-light-brown font-semibold text-base sm:text-lg">Daily budget control from your monthly plan</p>
+        <p class="text-light-brown text-sm sm:text-base max-w-2xl mx-auto mt-3 leading-relaxed">Set your budget for the month and Spendah automatically splits it across all days. Example: if your monthly budget is 1000, your daily limit is about 32. Spendah helps you stay within that amount.</p>
+    </header>
+
+    <div class="w-12 h-[3px] bg-gradient-to-r from-green to-[#76c58f] rounded-full mx-auto mb-8"></div>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+        <article class="bg-white rounded-[22px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.05s_both]">
+            <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>💸</span> How it works</h2>
+            <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Spendah gives you a clear daily limit based on your monthly budget, so you always know how much you can spend today without breaking your plan.</p>
+            <div class="grid grid-cols-2 gap-2.5 mt-4">
+                <div class="bg-soft-mint rounded-xl p-3.5 text-center">
+                    <div class="text-xs font-bold text-brown">Monthly budget</div>
+                    <div class="text-sm font-extrabold text-green mt-1">You decide</div>
+                </div>
+                <div class="bg-soft-mint rounded-xl p-3.5 text-center">
+                    <div class="text-xs font-bold text-brown">Daily amount</div>
+                    <div class="text-sm font-extrabold text-green mt-1">Auto split</div>
+                </div>
+            </div>
+        </article>
+
+        <article class="bg-white rounded-[22px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.1s_both]">
+            <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>⚙️</span> Modes</h2>
+            <div class="space-y-3 text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">
+                <p><span class="font-bold text-brown">Piggy Bank:</span> strict daily cap. Today is fixed and you cannot spend more than today allows.</p>
+                <p><span class="font-bold text-brown">Carryover:</span> flexible spending. You can borrow from tomorrow when needed and balance later.</p>
+            </div>
+            <div class="inline-flex items-center gap-1.5 bg-mint text-brown px-3.5 py-1.5 rounded-full text-xs font-bold mt-4">Two spending styles for different habits</div>
+        </article>
+    </section>
+
+    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.15s_both]">
+        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🎨</span> Themes and Apple Watch</h2>
+        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Spendah supports multiple visual themes and also works on Apple Watch, so your budget is always on your wrist.</p>
+    </section>
+
+    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.2s_both]">
+        <h2 class="font-heading text-lg font-bold mb-4 flex items-center gap-2"><span>📱</span> iPhone Screenshots</h2>
+        <div class="grid grid-cols-3 gap-3">
+            <img src="1.png" alt="Spendah iPhone screenshot 1" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="2.png" alt="Spendah iPhone screenshot 2" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="31.png" alt="Spendah iPhone screenshot 31" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="4.png" alt="Spendah iPhone screenshot 4" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="5.png" alt="Spendah iPhone screenshot 5" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="6.png" alt="Spendah iPhone screenshot 6" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+        </div>
+    </section>
+
+    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.22s_both]">
+        <h2 class="font-heading text-lg font-bold mb-4 flex items-center justify-center gap-2 text-center"><span>⌚</span> Apple Watch Screenshots</h2>
+        <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+            <img src="7.png" alt="Spendah Apple Watch screenshot 7" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="8.png" alt="Spendah Apple Watch screenshot 8" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+            <img src="9.png" alt="Spendah Apple Watch screenshot 9" class="w-full rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
+        </div>
+    </section>
+
+    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(47,125,74,0.08)] animate-[fade-in-up_0.8s_ease-out_0.25s_both]">
+        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🔒</span> Privacy Policy</h2>
+        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Effective date: March 12, 2026</p>
+        <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">
+            <p>Spendah does not collect, store, process, or transmit any personal data.</p>
+            <p>Spendah does not use analytics, advertising SDKs, trackers, third-party profiling tools, or external databases for user information.</p>
+            <p>Spendah does not share or distribute any user data to anyone, because no user data is collected.</p>
+            <p>All budgeting information entered in Spendah stays on your device.</p>
+            <p>If you have any questions about this policy, contact: <a href="mailto:ivan.eresko@proton.me" class="text-green font-bold no-underline hover:text-green-dark transition-colors">ivan.eresko@proton.me</a></p>
+        </div>
+        <div class="mt-4 inline-flex items-center rounded-full bg-[#e8f6ee] px-4 py-2 text-xs font-bold text-brown">No data collected. No data shared.</div>
+    </section>
+
+    <footer class="text-center mt-9 py-5 text-sm text-light-brown animate-[fade-in-up_0.8s_ease-out_0.3s_both]">
+        <p>© <script>document.write(new Date().getFullYear())</script> Spendah</p>
+    </footer>
+</div>
+
+<script>
+    const container = document.getElementById('dots');
+    for (let i = 0; i < 14; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        const size = 8 + Math.random() * 18;
+        dot.style.width = size + 'px';
+        dot.style.height = size + 'px';
+        dot.style.left = Math.random() * 100 + '%';
+        dot.style.animationDuration = 14 + Math.random() * 18 + 's';
+        dot.style.animationDelay = Math.random() * 18 + 's';
+        container.appendChild(dot);
+    }
+</script>
+
+</body>
+</html>

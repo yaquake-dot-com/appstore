@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Website — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FEFAF5;
+            --warm-white: #FFFFFF;
+            --sand: #F5EDE3;
+            --brown: #4A3728;
+            --light-brown: #8B7362;
+            --accent: #E8734A;
+            --soft-shadow: 0 4px 24px rgba(74, 55, 40, 0.06);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--cream);
+            color: var(--brown);
+            min-height: 100vh;
+        }
+
+        nav {
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 1.4em;
+            color: var(--brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo span { font-size: 1.2em; }
+
+        nav a.nav-link {
+            color: var(--light-brown);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        nav a.nav-link:hover { color: var(--accent); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--light-brown);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: color 0.2s;
+            margin-bottom: 40px;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .header {
+            margin-bottom: 50px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            font-size: 0.95em;
+            color: var(--light-brown);
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--brown);
+            margin-right: 6px;
+        }
+
+        .header p {
+            font-size: 1.05em;
+            color: var(--light-brown);
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #94D3F8, #5B9AE8);
+            border-radius: 20px;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--brown);
+        }
+
+        .section p {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: var(--light-brown);
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .section li {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: var(--light-brown);
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 18px;
+            font-size: 0.85em;
+            font-weight: 700;
+            background: var(--sand);
+            color: var(--brown);
+        }
+
+        .cta {
+            background: var(--warm-white);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .cta h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+            color: var(--light-brown);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 0.95em;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #D4612F;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 24px;
+            font-size: 0.85em;
+            color: var(--light-brown);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 30px 16px 60px; }
+            .header h1 { font-size: 1.6em; }
+            .project-image { height: 250px; font-size: 80px; }
+            .project-meta { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../../index.html" class="nav-logo"><span>🥝</span> Kiwi Apps</a>
+    <a href="mailto:ivan.eresko@proton.me" class="nav-link">Contact</a>
+</nav>
+
+<div class="container">
+    <a href="../index.html" class="back-link">← Back to portfolio</a>
+
+    <div class="header">
+        <h1>Design System Website</h1>
+        <div class="project-meta">
+            <div class="meta-item"><span class="meta-label">Type:</span> Web App</div>
+            <div class="meta-item"><span class="meta-label">Timeline:</span> 2 months</div>
+            <div class="meta-item"><span class="meta-label">Client:</span> Tech Startup</div>
+        </div>
+        <p>A comprehensive design system documentation website featuring interactive components, brand guidelines, and a complete component library for a growing tech startup.</p>
+    </div>
+
+    <div class="project-image">
+        🎨
+        <!-- Замените на реальное изображение: <img src="screenshot.png" alt="Website screenshot"> -->
+    </div>
+
+    <div class="section">
+        <h2>About the project</h2>
+        <p>The client needed a centralized hub for their design system used by product teams across multiple projects. I created an interactive, well-organized documentation site that makes it easy for developers and designers to find components, understand design principles, and access brand assets.</p>
+    </div>
+
+    <div class="section">
+        <h2>Key features</h2>
+        <ul>
+            <li>Interactive component library with live preview</li>
+            <li>Comprehensive brand guidelines and typography</li>
+            <li>Color palette management and accessibility info</li>
+            <li>Icon library with download options</li>
+            <li>Code snippets for developers</li>
+            <li>Responsive design system documentation</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technologies used</h2>
+        <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">MDX</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Results</h2>
+        <p>The design system website became an essential tool for the team, reducing design inconsistencies across products and speeding up development time. The interactive components and clear documentation helped onboard new team members faster and established a solid foundation for future product development.</p>
+    </div>
+
+    <div class="cta">
+        <h2>Need a design system for your team?</h2>
+        <p>Let's build something that scales with your product.</p>
+        <a href="mailto:ivan.eresko@proton.me" class="cta-button">Get in touch</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© <script>document.write(new Date().getFullYear())</script> Kiwi Apps. Made with 🧡</p>
+</div>
+
+</body>
+</html>
