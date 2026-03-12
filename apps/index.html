@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Kiwi Apps</title>
+    <title>My Apps — Kiwi Apps</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -15,7 +15,6 @@
             --accent: #E8734A;
             --accent-hover: #D4612F;
             --green: #5B9A6F;
-            --blue: #5B9AE8;
             --soft-shadow: 0 4px 24px rgba(74, 55, 40, 0.06);
         }
 
@@ -100,19 +99,19 @@
             line-height: 1.6;
         }
 
-        .portfolio-grid {
+        .apps-grid {
             max-width: 960px;
             margin: 0 auto;
             padding: 40px 24px 80px;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        .project-card {
+        .app-card {
             background: var(--warm-white);
             border-radius: 24px;
-            overflow: hidden;
+            padding: 32px;
             box-shadow: var(--soft-shadow);
             text-decoration: none;
             color: var(--brown);
@@ -122,79 +121,74 @@
             flex-direction: column;
         }
 
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.2s; }
-        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .app-card:nth-child(1) { animation-delay: 0.1s; }
+        .app-card:nth-child(2) { animation-delay: 0.2s; }
+        .app-card:nth-child(3) { animation-delay: 0.3s; }
 
-        .project-card:hover {
+        .app-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 36px rgba(74, 55, 40, 0.1);
         }
 
-        .project-image {
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, #F28482, #FFE8D6);
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
 
-        .project-content {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
         }
 
-        .project-card h2 {
+        .app-card h2 {
             font-family: 'Quicksand', sans-serif;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
-        .project-card p {
+        .app-card p {
             font-size: 0.95em;
             color: var(--light-brown);
             line-height: 1.6;
             flex-grow: 1;
         }
 
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .project-tag {
+        .app-tag {
             display: inline-block;
-            padding: 5px 12px;
-            border-radius: 16px;
-            font-size: 0.75em;
+            margin-top: 16px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8em;
             font-weight: 700;
-            background: var(--sand);
-            color: var(--brown);
+            align-self: flex-start;
         }
 
-        .empty-state {
+        .coming-soon {
+            border: 2px dashed var(--sand);
+            background: transparent;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .coming-soon p {
             text-align: center;
-            padding: 60px 24px;
             color: var(--light-brown);
-        }
-
-        .empty-state h2 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.5em;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .empty-state p {
-            font-size: 1em;
-            line-height: 1.6;
+            font-weight: 600;
+            font-size: 1.05em;
         }
 
         .footer {
@@ -207,7 +201,7 @@
         @media (max-width: 480px) {
             .header { padding: 40px 20px 30px; }
             .header h1 { font-size: 1.8em; }
-            .portfolio-grid { padding: 30px 16px 60px; }
+            .apps-grid { padding: 30px 16px 60px; }
         }
     </style>
 </head>
@@ -223,46 +217,34 @@
 </div>
 
 <div class="header">
-    <h1>Portfolio</h1>
-    <p>Custom apps and solutions built for clients. Each project is designed to solve real problems.</p>
+    <h1>My Apps</h1>
+    <p>Apps I've created and published. All designed with care and attention to detail.</p>
 </div>
 
-<div class="portfolio-grid">
+<div class="apps-grid">
 
-    <!-- Пример проекта - замените на ваши реальные проекты -->
-    <a href="./project-1/index.html" class="project-card">
-        <div class="project-image">📱</div>
-        <div class="project-content">
-            <h2>E-Commerce Mobile App</h2>
-            <p>A custom iOS shopping app with real-time inventory sync and secure payment processing.</p>
-            <div class="project-tags">
-                <span class="project-tag">iOS</span>
-                <span class="project-tag">React Native</span>
-                <span class="project-tag">E-Commerce</span>
-            </div>
-        </div>
+    <a href="../spendah/index.html" class="app-card">
+        <div class="app-icon"><img src="../spendah/logo.png" alt="Spendah"></div>
+        <h2>Spendah</h2>
+        <p>Set a monthly budget and get a clear day-by-day spending limit with flexible carryover options and Apple Watch support.</p>
+        <span class="app-tag" style="background: #E8F6EE; color: #2F7D4A;">Budget Tracker</span>
     </a>
 
-    <a href="./project-2/index.html" class="project-card">
-        <div class="project-image">🎨</div>
-        <div class="project-content">
-            <h2>Design System Website</h2>
-            <p>Interactive design system documentation for a tech startup. Complete component library and brand guidelines.</p>
-            <div class="project-tags">
-                <span class="project-tag">Web</span>
-                <span class="project-tag">Next.js</span>
-                <span class="project-tag">Design</span>
-            </div>
-        </div>
+    <a href="../nutria/index.html" class="app-card">
+        <div class="app-icon"><img src="../nutria/nutria.png" alt="Nutria Sticker Pack"></div>
+        <h2>Nutria Sticker Pack</h2>
+        <p>45 cute & romantic stickers featuring an adorable nutria for your iMessage conversations.</p>
+        <span class="app-tag" style="background: #FFE8D6; color: #D64550;">iMessage Stickers</span>
     </a>
 
-    <!-- Добавляйте ваши реальные проекты сюда -->
+    <div class="app-card coming-soon">
+        <p>✨ More apps coming soon...</p>
+    </div>
 
 </div>
 
 <div class="footer">
-    <p>Have a project in mind? <a href="mailto:ivan@kiwiapps.app" style="color: var(--accent); text-decoration: none; font-weight: 600;">Get in touch</a></p>
-    <p style="margin-top: 10px;">© <script>document.write(new Date().getFullYear())</script> Kiwi Apps. Made with 🧡</p>
+    <p>© 2025 Kiwi Apps. Made with 🧡</p>
 </div>
 
 </body>
