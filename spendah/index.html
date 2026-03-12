@@ -38,10 +38,10 @@
 
         .dot {
             position: absolute;
-            border-radius: 9999px;
-            background: radial-gradient(circle at 30% 30%, #6bcf8d, #2f7d4a);
-            opacity: 0.09;
+            font-size: 18px;
+            opacity: 0.12;
             animation: float-dot 20s linear infinite;
+            user-select: none;
         }
     </style>
 </head>
@@ -143,9 +143,8 @@
     for (let i = 0; i < 14; i++) {
         const dot = document.createElement('div');
         dot.className = 'dot';
-        const size = 8 + Math.random() * 18;
-        dot.style.width = size + 'px';
-        dot.style.height = size + 'px';
+        dot.textContent = '$';
+        dot.style.fontSize = (14 + Math.random() * 18) + 'px';
         dot.style.left = Math.random() * 100 + '%';
         dot.style.animationDuration = 14 + Math.random() * 18 + 's';
         dot.style.animationDelay = Math.random() * 18 + 's';
