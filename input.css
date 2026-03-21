@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+    /* Fonts (shared) */
+    --font-heading: 'Quicksand', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Main page colors (defaults) */
+    --color-cream: #FEFAF5;
+    --color-sand: #F5EDE3;
+    --color-brown: #4A3728;
+    --color-light-brown: #8B7362;
+    --color-accent: #E8734A;
+    --color-accent-hover: #D4612F;
+
+    /* Nutria colors */
+    --color-peach: #FFE8D6;
+    --color-blush: #FFB5A7;
+    --color-rose: #F28482;
+    --color-deep-rose: #D64550;
+
+    /* Spendah colors */
+    --color-soft-mint: #edf8f0;
+    --color-mint: #d9f0df;
+    --color-green: #2f7d4a;
+    --color-green-dark: #245f38;
+
+    /* ListCraft colors */
+    --color-soft-indigo: #EEF2FF;
+    --color-indigo: #818cf8;
+    --color-indigo-dark: #6366f1;
+    --color-dark: #0B0F19;
+}
+
+/* Shared keyframes */
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Spendah floating dots */
+@keyframes float-dot {
+    0% { transform: translateY(110vh) translateX(0); opacity: 0; }
+    10% { opacity: 0.09; }
+    90% { opacity: 0.09; }
+    100% { transform: translateY(-10vh) translateX(14px); opacity: 0; }
+}
+
+.dot {
+    position: absolute;
+    font-size: 18px;
+    opacity: 0.12;
+    animation: float-dot 20s linear infinite;
+    user-select: none;
+}
+
+/* Nutria floating hearts */
+@keyframes float-heart {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.06; }
+    90% { opacity: 0.06; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    opacity: 0.06;
+    animation: float-heart 20s infinite linear;
+}
