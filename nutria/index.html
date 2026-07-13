@@ -3,103 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutria Sticker Pack — Support & Privacy</title>
+    <meta name="description" content="Nutria Sticker Pack brings 45 hand-drawn, cute, and romantic stickers to iMessage.">
+    <title>Nutria Sticker Pack - Kiwi Apps</title>
     <link rel="canonical" href="https://kiwiapps.app/nutria/">
-    <link rel="stylesheet" href="../output.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#513a3a; --muted:#836b6b; --paper:#fff8f7; --surface:#fff; --line:#f1dada; --accent:#d95b78; --accent-dark:#af3f59; --soft:#ffe9ec; --peach:#ffe2d5; --shadow:0 18px 45px rgba(217,91,120,.13); }
+        * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; background:var(--paper); color:var(--ink); font-family:Nunito,sans-serif; } a { color:inherit; }
+        .page { width:min(1040px,calc(100% - 40px)); margin:0 auto; } .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 0; } .brand,.back { display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:800; text-decoration:none; } .brand-mark { font-size:18px; } .back { color:var(--muted); } .back:hover { color:var(--accent); }
+        .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,.75fr); gap:64px; align-items:center; padding:62px 0 76px; } .eyebrow { margin:0 0 14px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; } h1,h2,h3,p { margin-top:0; } h1 { margin-bottom:16px; font-family:Quicksand,sans-serif; font-size:clamp(42px,5vw,62px); line-height:1; letter-spacing:-.055em; } .tagline { margin-bottom:16px; color:var(--accent-dark); font-size:19px; font-weight:800; } .intro { max-width:520px; margin-bottom:25px; color:var(--muted); font-size:17px; line-height:1.7; }
+        .store-badge { display:inline-block; transition:transform .2s ease,opacity .2s ease; } .store-badge:hover { opacity:.88; transform:translateY(-1px); } .store-badge img { display:block; height:52px; }
+        .art { position:relative; display:grid; place-items:center; min-height:330px; } .art::before,.art::after { position:absolute; content:""; border-radius:50%; } .art::before { width:275px; height:275px; background:var(--soft); } .art::after { width:180px; height:180px; background:var(--peach); transform:translate(95px,84px); } .app-icon { position:relative; z-index:1; width:205px; height:205px; overflow:hidden; border-radius:48px; box-shadow:var(--shadow); transform:rotate(-5deg); } .app-icon img { display:block; width:100%; height:100%; }
+        .section { padding:64px 0; border-top:1px solid var(--line); } .section-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; } h2 { margin-bottom:0; font-family:Quicksand,sans-serif; font-size:clamp(28px,3vw,40px); line-height:1.08; letter-spacing:-.04em; } .section-heading p { max-width:400px; margin-bottom:0; color:var(--muted); font-size:15px; line-height:1.65; }
+        .cards { display:grid; grid-template-columns:repeat(3,1fr); overflow:hidden; border:1px solid var(--line); border-radius:20px; background:var(--surface); } .card { min-height:210px; padding:28px; border-right:1px solid var(--line); } .card:last-child { border-right:0; } .icon { display:grid; place-items:center; width:38px; height:38px; margin-bottom:26px; border-radius:12px; background:var(--soft); color:var(--accent-dark); font-size:18px; } h3 { margin-bottom:9px; font-family:Quicksand,sans-serif; font-size:18px; } .card p,.support p { margin-bottom:0; color:var(--muted); font-size:15px; line-height:1.65; }
+        .sticker-note { display:grid; grid-template-columns:120px 1fr; gap:26px; align-items:center; padding:28px; border-radius:20px; background:var(--soft); } .sticker-note img { display:block; width:120px; border-radius:26px; box-shadow:0 9px 20px rgba(217,91,120,.18); } .sticker-note h3 { margin-bottom:7px; font-size:22px; } .sticker-note p { margin-bottom:0; color:var(--muted); line-height:1.7; }
+        .support { max-width:750px; } .support h2 { margin-bottom:15px; } .support p + p { margin-top:12px; } .support a { color:var(--accent); font-weight:800; text-decoration:none; } .privacy-pill { display:inline-block; margin-top:16px; padding:8px 11px; border-radius:99px; background:var(--peach); color:var(--ink); font-size:12px; font-weight:800; } .footer { display:flex; justify-content:space-between; gap:16px; padding:30px 0 42px; color:var(--muted); font-size:13px; }
+        @media (max-width:760px) { .page { width:min(100% - 28px,1040px); } .hero { grid-template-columns:1fr; gap:28px; padding:40px 0 52px; } .art { min-height:260px; order:-1; } .art::before { width:220px; height:220px; } .app-icon { width:166px; height:166px; border-radius:39px; } .section { padding:48px 0; } .section-heading { display:block; } .section-heading p { margin-top:14px; } .cards { grid-template-columns:1fr; } .card { min-height:0; border-right:0; border-bottom:1px solid var(--line); } .card:last-child { border-bottom:0; } .sticker-note { grid-template-columns:84px 1fr; gap:18px; padding:20px; } .sticker-note img { width:84px; border-radius:19px; } .footer { flex-direction:column; } }
+    </style>
 </head>
-<body class="bg-cream font-body text-brown min-h-screen overflow-x-hidden">
-
-<!-- FLOATING HEARTS -->
-<div id="hearts" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
-
-<!-- NAV -->
-<nav class="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 py-5 flex items-center justify-between">
-    <a href="../index.html" class="font-heading font-bold text-lg sm:text-xl text-brown no-underline flex items-center gap-2">
-        <span class="text-xl">🥝</span> Kiwi Apps
-    </a>
-    <a href="../index.html" class="text-light-brown no-underline font-semibold text-sm hover:text-rose transition-colors">← Back to Home</a>
-</nav>
-
-<!-- CONTENT -->
-<div class="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-10">
-
-    <!-- HEADER -->
-    <div class="text-center mb-10 animate-[fade-in-down_0.8s_ease-out]">
-        <div class="w-24 h-24 sm:w-[100px] sm:h-[100px] rounded-[26px] mx-auto mb-5 shadow-[0_6px_24px_rgba(242,132,130,0.25)] overflow-hidden transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-            <img src="nutria.png" alt="Nutria Sticker Pack" class="w-full h-full">
-        </div>
-        <h1 class="font-heading text-3xl sm:text-4xl font-bold mb-1.5">Nutria Sticker Pack</h1>
-        <p class="text-light-brown font-semibold text-base sm:text-lg">Cute & romantic stickers for iMessage</p>
-        <a href="https://apps.apple.com/nz/app/nutria-sticker-pack/id6759588546" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 transition-all duration-200 hover:scale-105 hover:opacity-85">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-[52px]">
-        </a>
-    </div>
-
-    <!-- DIVIDER -->
-    <div class="w-12 h-[3px] bg-gradient-to-r from-blush to-rose rounded-full mx-auto mb-8"></div>
-
-    <!-- ABOUT -->
-    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.1s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>💕</span> About</h2>
-        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Meet Nutria — an adorable little coypu ready to fill your iMessage chats with love, warmth, and cuteness! 45 hand-drawn stickers for every tender moment.</p>
-        <div class="grid grid-cols-2 gap-2.5 mt-4">
-            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
-                <div class="text-xl mb-1">🎨</div>
-                <div class="text-xs font-bold text-brown">45 Stickers</div>
-            </div>
-            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
-                <div class="text-xl mb-1">💌</div>
-                <div class="text-xs font-bold text-brown">Romantic</div>
-            </div>
-            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
-                <div class="text-xl mb-1">✏️</div>
-                <div class="text-xs font-bold text-brown">Hand-drawn</div>
-            </div>
-            <div class="bg-cream rounded-xl p-3.5 text-center transition-transform duration-200 hover:-translate-y-0.5">
-                <div class="text-xl mb-1">💬</div>
-                <div class="text-xs font-bold text-brown">iMessage</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SUPPORT -->
-    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.15s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>📬</span> Support</h2>
-        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Having issues or have a suggestion? We'd love to hear from you! Reach out and we'll get back to you as soon as possible.</p>
-        <p class="mt-2.5">
-            <a href="mailto:ivan@kiwiapps.app" class="text-rose font-bold no-underline hover:text-deep-rose transition-colors text-sm sm:text-[0.95rem]">ivan@kiwiapps.app</a>
-        </p>
-    </div>
-
-    <!-- PRIVACY -->
-    <div class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(74,55,40,0.06)] animate-[fade-in-up_0.8s_ease-out_0.2s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🔒</span> Privacy Policy</h2>
-        <p class="text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">Nutria Sticker Pack does not collect, store, or share any personal data. The app contains no analytics, tracking, or third-party services. Your conversations remain completely private.</p>
-        <div class="inline-flex items-center gap-1.5 bg-peach text-brown px-3.5 py-1.5 rounded-full text-xs font-bold mt-2.5">🛡️ Zero data collected</div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="text-center mt-9 py-5 text-sm text-light-brown animate-[fade-in-up_0.8s_ease-out_0.3s_both]">
-        <p>© <script>document.write(new Date().getFullYear())</script> Nutria Sticker Pack</p>
-    </div>
-</div>
-
-<script>
-    const container = document.getElementById('hearts');
-    const hearts = ['❤️', '🧡', '💛', '💕', '💗', '🤎'];
-    for (let i = 0; i < 15; i++) {
-        const h = document.createElement('div');
-        h.className = 'heart';
-        h.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-        h.style.left = Math.random() * 100 + '%';
-        const duration = 15 + Math.random() * 20;
-        h.style.animationDuration = duration + 's';
-        h.style.animationDelay = -Math.random() * duration + 's';
-        h.style.fontSize = (14 + Math.random() * 14) + 'px';
-        container.appendChild(h);
-    }
-</script>
-
+<body>
+    <main class="page">
+        <nav class="nav" aria-label="Primary navigation"><a href="../index.html" class="brand"><span class="brand-mark">🥝</span> Kiwi Apps</a><a href="../index.html" class="back">Back to home</a></nav>
+        <header class="hero">
+            <div><p class="eyebrow">iMessage sticker pack</p><h1>A little more feeling in every message.</h1><p class="tagline">45 hand-drawn stickers for warm, romantic conversations.</p><p class="intro">Meet Nutria: a small, expressive companion for the moments that are sweet, silly, supportive, and full of affection.</p><a href="https://apps.apple.com/nz/app/nutria-sticker-pack/id6759588546" target="_blank" rel="noopener noreferrer" class="store-badge"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a></div>
+            <div class="art"><div class="app-icon"><img src="nutria.png" alt="Nutria Sticker Pack app icon"></div></div>
+        </header>
+        <section class="section" aria-labelledby="benefits-title"><div class="section-heading"><h2 id="benefits-title">A sticker for the softer moments.</h2><p>Nutria is made for conversations where a short message needs a little more personality.</p></div><div class="cards"><article class="card"><span class="icon">45</span><h3>Forty-five stickers</h3><p>A complete pack of expressive stickers to keep your reactions, greetings, and affectionate messages fresh.</p></article><article class="card"><span class="icon">H</span><h3>Hand-drawn character</h3><p>A warm illustration style gives every sticker its own small bit of charm without feeling generic.</p></article><article class="card"><span class="icon">iM</span><h3>Made for iMessage</h3><p>Send a little tenderness, encouragement, or playful drama right inside your everyday chats.</p></article></div></section>
+        <section class="section" aria-labelledby="pack-title"><div class="section-heading"><h2 id="pack-title">Small drawings, big reactions.</h2><p>A focused pack made around a single character and a consistent visual world.</p></div><article class="sticker-note"><img src="nutria.png" alt="Nutria character"><div><h3>Designed to be sent, not explained.</h3><p>From quiet affection to enthusiastic celebration, the pack gives you a simple visual way to say what a plain text message cannot always carry.</p></div></article></section>
+        <section class="section support" aria-labelledby="support-title"><p class="eyebrow">Support and privacy</p><h2 id="support-title">Your conversations stay private.</h2><p>Nutria Sticker Pack does not collect, store, or share personal data. It contains no analytics, tracking, or third-party services.</p><p>Having an issue or a suggestion? Contact <a href="mailto:ivan@kiwiapps.app">ivan@kiwiapps.app</a>.</p><span class="privacy-pill">No data collected. No data shared.</span></section>
+        <footer class="footer"><span>Copyright <script>document.write(new Date().getFullYear())</script> Nutria Sticker Pack</span><a href="https://kiwiapps.app">kiwiapps.app</a></footer>
+    </main>
 </body>
 </html>

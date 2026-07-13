@@ -3,120 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ListCraft creates property listing descriptions, headlines, social posts, rewrites, and vendor emails for real estate agents.">
     <title>ListCraft - AI Property Listing Tool</title>
     <link rel="canonical" href="https://kiwiapps.app/listcraft/">
-    <link rel="stylesheet" href="../output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-cream: #F8F9FC;
-            --color-brown: #1e293b;
-            --color-light-brown: #64748b;
-        }
+        :root { --ink:#1e293b; --muted:#64748b; --paper:#f8f9fc; --surface:#fff; --line:#dbe1f0; --accent:#4f46e5; --accent-dark:#3730a3; --soft:#eef2ff; --shadow:0 18px 45px rgba(79,70,229,.10); }
+        * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; background:var(--paper); color:var(--ink); font-family:Manrope,sans-serif; } a { color:inherit; }
+        .page { width:min(1100px,calc(100% - 40px)); margin:0 auto; } .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+        .brand,.back { display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:800; text-decoration:none; } .brand-mark { display:grid; place-items:center; width:29px; height:29px; border-radius:8px; background:#111827; color:#fff; font-family:"DM Mono",monospace; } .brand-mark b { color:#818cf8; }
+        .back { color:var(--muted); } .back:hover { color:var(--accent); }
+        .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,.9fr); gap:60px; align-items:center; padding:62px 0 76px; } .eyebrow { margin:0 0 14px; color:var(--accent); font:500 12px/1.2 "DM Mono",monospace; letter-spacing:.08em; text-transform:uppercase; }
+        h1,h2,h3,p { margin-top:0; } h1 { margin-bottom:16px; font-size:clamp(42px,5vw,64px); line-height:1; letter-spacing:-.055em; } .tagline { margin-bottom:16px; color:var(--accent-dark); font-size:19px; font-weight:800; } .intro { max-width:560px; margin-bottom:24px; color:var(--muted); font-size:17px; line-height:1.7; }
+        .button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 16px; border-radius:7px; background:var(--accent-dark); color:#fff; font-size:14px; font-weight:800; text-decoration:none; transition:background .2s ease,transform .2s ease; } .button:hover { background:var(--accent); transform:translateY(-1px); }
+        .preview { overflow:hidden; border:1px solid #cfd7ee; border-radius:12px; background:var(--surface); box-shadow:var(--shadow); transform:rotate(1.5deg); } .preview-bar { display:flex; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--line); background:#f7f8ff; color:var(--muted); font:500 11px/1 "DM Mono",monospace; } .preview-body { padding:24px; } .preview-label { display:inline-block; margin-bottom:15px; padding:5px 7px; border-radius:4px; background:var(--soft); color:var(--accent-dark); font:500 11px/1 "DM Mono",monospace; } .preview h3 { margin-bottom:11px; font-size:20px; } .preview p { color:var(--muted); font-size:13px; line-height:1.7; } .preview-lines { display:grid; gap:8px; margin-top:20px; } .preview-lines span { display:block; height:7px; border-radius:4px; background:#e6e9f9; } .preview-lines span:nth-child(2) { width:78%; } .preview-lines span:nth-child(3) { width:92%; }
+        .section { padding:64px 0; border-top:1px solid var(--line); } .section-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; } h2 { margin-bottom:0; font-size:clamp(28px,3vw,40px); line-height:1.08; letter-spacing:-.04em; } .section-heading p { max-width:420px; margin-bottom:0; color:var(--muted); font-size:15px; line-height:1.65; }
+        .cards { display:grid; grid-template-columns:repeat(3,1fr); overflow:hidden; border:1px solid var(--line); border-radius:10px; background:var(--surface); } .card { min-height:210px; padding:28px; border-right:1px solid var(--line); } .card:last-child { border-right:0; } .number { display:block; margin-bottom:30px; color:var(--accent); font:500 12px/1 "DM Mono",monospace; } h3 { margin-bottom:9px; font-size:18px; letter-spacing:-.025em; } .card p,.support p { margin-bottom:0; color:var(--muted); font-size:15px; line-height:1.65; }
+        .tools { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; } .tool { padding:17px 14px; border-radius:8px; background:var(--surface); box-shadow:0 7px 18px rgba(79,70,229,.05); font-size:13px; font-weight:800; text-align:center; } .tool small { display:block; margin-top:6px; color:var(--muted); font-size:11px; font-weight:500; }
+        .plans { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } .plan { padding:25px; border:1px solid var(--line); border-radius:10px; background:var(--surface); } .plan.featured { border:2px solid var(--accent); } .plan h3 { margin-bottom:3px; } .price { margin:12px 0 5px; color:var(--accent-dark); font-size:29px; font-weight:800; } .plan p { margin-bottom:0; color:var(--muted); font-size:13px; }
+        .support { max-width:780px; } .support h2 { margin-bottom:15px; } .support p + p { margin-top:12px; } .support a { color:var(--accent); font-weight:800; text-decoration:none; } .footer { display:flex; justify-content:space-between; gap:16px; padding:30px 0 42px; color:var(--muted); font-size:13px; }
+        @media (max-width:760px) { .page { width:min(100% - 28px,1100px); } .hero { grid-template-columns:1fr; gap:36px; padding:40px 0 52px; } .preview { transform:none; } .section { padding:48px 0; } .section-heading { display:block; } .section-heading p { margin-top:14px; } .cards,.tools,.plans { grid-template-columns:1fr; } .card { min-height:0; border-right:0; border-bottom:1px solid var(--line); } .card:last-child { border-bottom:0; } .footer { flex-direction:column; } }
     </style>
 </head>
-<body class="bg-cream font-body text-brown min-h-screen overflow-x-hidden">
-
-<nav class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-5 flex items-center justify-between">
-    <a href="../index.html" class="font-heading font-bold text-lg sm:text-xl text-brown no-underline flex items-center gap-2">
-        <span class="text-xl">🥝</span> Kiwi Apps
-    </a>
-    <a href="../index.html" class="text-light-brown no-underline font-semibold text-sm hover:text-indigo transition-colors">&larr; Back to Home</a>
-</nav>
-
-<div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-6 sm:pt-10 pb-12">
-    <header class="text-center mb-10 animate-[fade-in-down_0.8s_ease-out]">
-        <div class="w-24 h-24 sm:w-[104px] sm:h-[104px] rounded-[26px] mx-auto mb-5 shadow-[0_8px_24px_rgba(99,102,241,0.25)] overflow-hidden bg-dark flex items-center justify-center transition-transform duration-300 hover:scale-105">
-            <span class="text-4xl font-bold" style="font-family:system-ui"><span class="text-white">L</span><span class="text-indigo">C</span></span>
-        </div>
-        <h1 class="font-heading text-3xl sm:text-4xl font-bold mb-1.5">ListCraft</h1>
-        <p class="text-light-brown font-semibold text-base sm:text-lg">AI-powered property listing copy in seconds</p>
-        <p class="text-light-brown text-sm sm:text-base max-w-2xl mx-auto mt-3 leading-relaxed">Generate professional property descriptions, headlines, social media posts, listing rewrites, and vendor emails — all tailored to your local market.</p>
-        <a href="https://listcraft.cc" target="_blank" class="inline-block mt-6 px-8 py-3.5 bg-indigo-dark hover:bg-indigo text-white no-underline rounded-2xl font-bold text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5">Visit ListCraft</a>
-    </header>
-
-    <div class="w-12 h-[3px] bg-gradient-to-r from-indigo to-[#a5b4fc] rounded-full mx-auto mb-8"></div>
-
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <article class="bg-white rounded-[22px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(99,102,241,0.08)] animate-[fade-in-up_0.8s_ease-out_0.05s_both]">
-            <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>✍️</span> 5 Writing Tools</h2>
-            <div class="space-y-2.5 text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">
-                <p><span class="font-bold text-brown">Listing Description:</span> Full 2-3 paragraph property descriptions with hook, features, and call to action.</p>
-                <p><span class="font-bold text-brown">Headline Generator:</span> 5 punchy headline options from different angles — lifestyle, value, urgency.</p>
-                <p><span class="font-bold text-brown">Social Post:</span> Ready-to-post content for Facebook and Instagram with targeted hashtags.</p>
-                <p><span class="font-bold text-brown">Listing Rewrite:</span> Transform an existing listing into a fresh, compelling description.</p>
-                <p><span class="font-bold text-brown">Email to Vendor:</span> Professional emails for market updates, price reviews, and campaign reports.</p>
-            </div>
-        </article>
-
-        <article class="bg-white rounded-[22px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(99,102,241,0.08)] animate-[fade-in-up_0.8s_ease-out_0.1s_both]">
-            <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🌍</span> Smart Context</h2>
-            <div class="space-y-2.5 text-sm sm:text-[0.95rem] leading-relaxed text-light-brown">
-                <p><span class="font-bold text-brown">Local Market:</span> Automatically detects your country and uses the right terminology — NZ, AU, US, UK, CA, IE, ZA.</p>
-                <p><span class="font-bold text-brown">Location Aware:</span> Knows your suburb and includes lifestyle details about the area — beaches, schools, cafes.</p>
-                <p><span class="font-bold text-brown">Price Tone:</span> Adjusts language based on price tier — standard, premium, or luxury.</p>
-                <p><span class="font-bold text-brown">Seasonality:</span> References the current season with hemisphere-aware detection.</p>
-                <p><span class="font-bold text-brown">Local Highlights:</span> Optional deep-dive into area attractions, landmarks, and lifestyle.</p>
-            </div>
-        </article>
-    </section>
-
-    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(99,102,241,0.08)] animate-[fade-in-up_0.8s_ease-out_0.15s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>⚡</span> Quality & Speed</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
-            <div class="bg-soft-indigo rounded-xl p-4 text-center">
-                <div class="text-xs font-bold text-brown">AI Model</div>
-                <div class="text-sm font-extrabold text-indigo-dark mt-1">Claude Haiku / Sonnet</div>
-            </div>
-            <div class="bg-soft-indigo rounded-xl p-4 text-center">
-                <div class="text-xs font-bold text-brown">Generation Time</div>
-                <div class="text-sm font-extrabold text-indigo-dark mt-1">3-8 seconds</div>
-            </div>
-            <div class="bg-soft-indigo rounded-xl p-4 text-center">
-                <div class="text-xs font-bold text-brown">Anti-Cliche</div>
-                <div class="text-sm font-extrabold text-indigo-dark mt-1">No "stunning" allowed</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(99,102,241,0.08)] animate-[fade-in-up_0.8s_ease-out_0.2s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>💰</span> Plans</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
-            <div class="bg-soft-indigo rounded-xl p-5 text-center">
-                <div class="text-sm font-bold text-brown">Free</div>
-                <div class="text-2xl font-extrabold text-indigo-dark mt-1">$0</div>
-                <div class="text-xs text-light-brown mt-1">3 generations/month</div>
-            </div>
-            <div class="bg-soft-indigo rounded-xl p-5 text-center ring-2 ring-indigo">
-                <div class="text-sm font-bold text-brown">Starter</div>
-                <div class="text-2xl font-extrabold text-indigo-dark mt-1">$11.99</div>
-                <div class="text-xs text-light-brown mt-1">50 generations/month</div>
-            </div>
-            <div class="bg-soft-indigo rounded-xl p-5 text-center">
-                <div class="text-sm font-bold text-brown">Pro</div>
-                <div class="text-2xl font-extrabold text-indigo-dark mt-1">$24.99</div>
-                <div class="text-xs text-light-brown mt-1">300 generations/month</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-white rounded-[22px] p-6 sm:p-8 mb-4 shadow-[0_4px_24px_rgba(99,102,241,0.08)] animate-[fade-in-up_0.8s_ease-out_0.25s_both]">
-        <h2 class="font-heading text-lg font-bold mb-2.5 flex items-center gap-2"><span>🛠️</span> Tech Stack</h2>
-        <div class="flex flex-wrap gap-2 mt-3">
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Next.js 16</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">TypeScript</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Tailwind CSS</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Supabase</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Stripe</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Claude API</span>
-            <span class="px-3 py-1.5 rounded-xl text-xs font-bold bg-soft-indigo text-brown">Vercel</span>
-        </div>
-    </section>
-
-    <footer class="text-center mt-9 py-5 text-sm text-light-brown animate-[fade-in-up_0.8s_ease-out_0.3s_both]">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> ListCraft</p>
-    </footer>
-</div>
-
+<body>
+    <main class="page">
+        <nav class="nav" aria-label="Primary navigation"><a href="../index.html" class="brand"><span class="brand-mark">L<b>C</b></span> Kiwi Apps</a><a href="../index.html" class="back">Back to home</a></nav>
+        <header class="hero">
+            <div><p class="eyebrow">Writing assistant for real estate</p><h1>Turn property details into better listings.</h1><p class="tagline">AI-powered copy that stays grounded in the local market.</p><p class="intro">ListCraft creates polished property descriptions, headline options, social posts, rewrites, and vendor emails without the blank-page problem.</p><a href="https://listcraft.cc" target="_blank" rel="noopener noreferrer" class="button">Visit ListCraft</a></div>
+            <div class="preview" aria-label="ListCraft writing preview"><div class="preview-bar"><span>LISTING DESCRIPTION</span><span>READY TO EDIT</span></div><div class="preview-body"><span class="preview-label">CHARACTER HOME</span><h3>Room to live, entertain, and grow.</h3><p>Start with a clear, relevant property story. ListCraft helps transform the details agents already have into concise, market-aware copy.</p><div class="preview-lines" aria-hidden="true"><span></span><span></span><span></span></div></div></div>
+        </header>
+        <section class="section" aria-labelledby="benefits-title"><div class="section-heading"><h2 id="benefits-title">From facts to a finished first draft.</h2><p>Use a focused set of tools instead of forcing every property into the same generic description.</p></div><div class="cards"><article class="card"><span class="number">01</span><h3>Market-aware writing</h3><p>Country-aware terminology, local context, price positioning, and seasonality help the output fit the listing and its audience.</p></article><article class="card"><span class="number">02</span><h3>A stronger starting point</h3><p>Get useful copy in seconds, then make the final edits with your own expertise and local knowledge.</p></article><article class="card"><span class="number">03</span><h3>One workspace</h3><p>Create descriptions, campaigns, rewrites, and vendor communication without switching between disconnected writing tools.</p></article></div></section>
+        <section class="section" aria-labelledby="tools-title"><div class="section-heading"><h2 id="tools-title">Five focused writing tools.</h2><p>Each tool is designed around a familiar part of the real-estate listing workflow.</p></div><div class="tools"><div class="tool">Description<small>Full listing copy</small></div><div class="tool">Headlines<small>Five directions</small></div><div class="tool">Social Post<small>Ready to share</small></div><div class="tool">Rewrite<small>Fresh perspective</small></div><div class="tool">Vendor Email<small>Clear updates</small></div></div></section>
+        <section class="section" aria-labelledby="plans-title"><div class="section-heading"><h2 id="plans-title">Choose a working rhythm.</h2><p>Start small, then select a plan that matches the volume of your current listing work.</p></div><div class="plans"><article class="plan"><h3>Free</h3><div class="price">$0</div><p>3 generations each month</p></article><article class="plan featured"><h3>Starter</h3><div class="price">$11.99</div><p>50 generations each month</p></article><article class="plan"><h3>Pro</h3><div class="price">$24.99</div><p>300 generations each month</p></article></div></section>
+        <section class="section support" aria-labelledby="support-title"><p class="eyebrow">Support and privacy</p><h2 id="support-title">Questions about ListCraft?</h2><p>For support, account, or privacy questions, contact <a href="mailto:ivan@kiwiapps.app">ivan@kiwiapps.app</a>.</p></section>
+        <footer class="footer"><span>Copyright <script>document.write(new Date().getFullYear())</script> ListCraft</span><a href="https://kiwiapps.app">kiwiapps.app</a></footer>
+    </main>
 </body>
 </html>

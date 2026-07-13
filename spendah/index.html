@@ -3,6 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spendah turns a monthly budget into a clear daily spending limit on iPhone and Apple Watch.">
+    <title>Spendah - Daily Budget Control</title>
+    <link rel="canonical" href="https://kiwiapps.app/spendah/">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --ink:#2f3b2e; --muted:#5f6b5e; --paper:#f8faf8; --surface:#fff; --line:#dbe5da; --accent:#2f7d4a; --accent-dark:#216638; --soft:#e8f6ee; --shadow:0 18px 45px rgba(47,125,74,.10); }
+        * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Nunito,sans-serif; }
+    a { color:inherit; }
+    .page { width:min(1100px,calc(100% - 40px)); margin:0 auto; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+    .brand,.back { display:inline-flex; align-items:center; gap:9px; color:var(--ink); font-size:14px; font-weight:800; text-decoration:none; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,.85fr); gap:60px; align-items:center; padding:62px 0 76px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:14px; font-family:Quicksand,sans-serif; font-size:clamp(42px,5vw,64px); line-height:1; letter-spacing:-.05em; }
+    .tagline { margin-bottom:16px; color:var(--accent-dark); font-size:19px; font-weight:800; }
+    .intro { max-width:560px; margin-bottom:24px; color:var(--muted); font-size:17px; line-height:1.7; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 16px; border-radius:8px; background:var(--accent); color:#fff; font-size:14px; font-weight:800; text-decoration:none; transition:background .2s ease,transform .2s ease; }
+    .button:hover { background:var(--accent-dark); transform:translateY(-1px); }
+    .availability { color:var(--muted); font-size:13px; font-weight:700; }
+    .device-frame { width:min(100%,310px); margin:0 auto; padding:11px; border:1px solid rgba(47,125,74,.22); border-radius:31px; background:#1d2820; box-shadow:var(--shadow); transform:rotate(3deg); }
+    .device-frame img { display:block; width:100%; border-radius:22px; }
+    .section { padding:64px 0; border-top:1px solid var(--line); }
+    .section-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+    h2 { margin-bottom:0; font-family:Quicksand,sans-serif; font-size:clamp(28px,3vw,40px); line-height:1.08; letter-spacing:-.04em; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+    .card { min-height:210px; padding:28px; border-right:1px solid var(--line); }
+    .card:last-child { border-right:0; }
+    .number { display:block; margin-bottom:30px; color:var(--accent); font-size:12px; font-weight:800; }
+    h3 { margin-bottom:9px; font-family:Quicksand,sans-serif; font-size:18px; }
+    .card p,.policy p { margin-bottom:0; color:var(--muted); font-size:15px; line-height:1.65; }
+    .modes { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .mode { padding:30px; border-radius:14px; background:var(--surface); box-shadow:0 8px 26px rgba(47,125,74,.05); }
+    .mode-label { display:inline-block; margin-bottom:18px; padding:6px 9px; border-radius:6px; background:var(--soft); color:var(--accent-dark); font-size:12px; font-weight:800; }
+    .mode p { margin-bottom:0; color:var(--muted); line-height:1.7; }
+    .shots { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .shot { overflow:hidden; border-radius:18px; background:#edf3ed; box-shadow:0 10px 24px rgba(47,125,74,.09); }
+    .shot img { display:block; width:100%; }
+    .watch-shots { display:grid; grid-template-columns:repeat(3,minmax(0,170px)); justify-content:center; gap:18px; margin-top:18px; }
+    .policy { max-width:780px; }
+    .policy h2 { margin-bottom:15px; }
+    .policy p + p { margin-top:12px; }
+    .support { color:var(--accent); font-weight:800; text-decoration:none; }
+        .footer { display:flex; justify-content:space-between; gap:16px; padding:30px 0 42px; color:var(--muted); font-size:13px; }
+        @media (max-width:760px) { .page { width:min(100% - 28px,1100px); } .hero,.modes { grid-template-columns:1fr; gap:36px; } .hero { padding:40px 0 52px; } .device-frame { transform:none; } .section { padding:48px 0; } .section-heading { display:block; } .section-heading p { margin-top:14px; } .cards,.shots { grid-template-columns:1fr; } .card { min-height:0; border-right:0; border-bottom:1px solid var(--line); } .card:last-child { border-bottom:0; } .watch-shots { grid-template-columns:repeat(3,1fr); gap:9px; } .footer { flex-direction:column; } }
+    </style>
+    </head>
+<body>
+        <main class="page">
+            <nav class="nav" aria-label="Primary navigation">
+                <a href="../index.html" class="brand"><span class="brand-mark">🥝</span> Kiwi Apps</a>
+                <a href="../index.html" class="back">Back to home</a>
+            </nav>
+
+            <header class="hero">
+                <div>
+                    <p class="eyebrow">Personal budget companion</p>
+                    <h1>Spend your month with clarity.</h1>
+                    <p class="tagline">Daily budget control from a monthly plan.</p>
+                    <p class="intro">Set the budget for the month, then see exactly what you can spend today. Spendah turns a big monthly number into a calm, practical daily limit.</p>
+                    <div class="actions"><a class="button" href="mailto:ivan@kiwiapps.app?subject=Spendah%20support">Get support</a><span class="availability">iPhone and Apple Watch</span></div>
+                </div>
+                <div class="device-frame"><img src="1.png" alt="Spendah showing a daily budget on iPhone"></div>
+            </header>
+
+            <section class="section" aria-labelledby="benefits-title">
+                <div class="section-heading"><h2 id="benefits-title">A clearer way to stay on plan.</h2><p>Spendah makes the number that matters today visible at a glance, without turning budgeting into a chore.</p></div>
+                <div class="cards">
+                    <article class="card"><span class="number">01</span><h3>One daily number</h3><p>Your monthly budget is automatically split across the remaining days, so you know what is safe to spend now.</p></article>
+                    <article class="card"><span class="number">02</span><h3>Two spending styles</h3><p>Choose a strict daily cap or use flexible carryover when your real life does not follow a perfectly even schedule.</p></article>
+                    <article class="card"><span class="number">03</span><h3>On your wrist</h3><p>Check your budget from Apple Watch whenever you need a quick answer before a purchase.</p></article>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="modes-title">
+                <div class="section-heading"><h2 id="modes-title">Choose how you budget.</h2><p>Two modes let Spendah fit either a more structured routine or a more flexible month.</p></div>
+                <div class="modes">
+                    <article class="mode"><span class="mode-label">Piggy Bank</span><h3>A fixed daily limit</h3><p>Today has a clear ceiling. Use it when you want a simple guardrail and a steady rhythm through the month.</p></article>
+                    <article class="mode"><span class="mode-label">Carryover</span><h3>Flexibility when needed</h3><p>Spend a little more today and rebalance later. Your remaining budget adapts instead of treating every day as isolated.</p></article>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="screens-title">
+                <div class="section-heading"><h2 id="screens-title">Ready when you are.</h2><p>See your monthly plan, daily allowance, and budget progress in a clean, glanceable interface.</p></div>
+                <div class="shots"><div class="shot"><img src="2.png" alt="Spendah budget overview"></div><div class="shot"><img src="31.png" alt="Spendah daily budget view"></div><div class="shot"><img src="4.png" alt="Spendah budgeting controls"></div></div>
+                <div class="watch-shots"><div class="shot"><img src="7.png" alt="Spendah on Apple Watch"></div><div class="shot"><img src="8.png" alt="Spendah Apple Watch budget display"></div><div class="shot"><img src="9.png" alt="Spendah Apple Watch settings"></div></div>
+            </section>
+
+            <section class="section policy" aria-labelledby="privacy-title">
+                <p class="eyebrow">Privacy</p><h2 id="privacy-title">Your budget stays on your device.</h2>
+                <p>Spendah does not collect, store, process, or transmit personal data. It contains no analytics, advertising SDKs, trackers, or third-party profiling tools.</p>
+                <p>All budgeting information remains on your device. Questions or support: <a class="support" href="mailto:ivan@kiwiapps.app">ivan@kiwiapps.app</a></p>
+            </section>
+
+            <footer class="footer"><span>Copyright <script>document.write(new Date().getFullYear())</script> Spendah</span><a class="support" href="https://kiwiapps.app">kiwiapps.app</a></footer>
+        </main>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spendah - Support and Privacy</title>
     <link rel="canonical" href="https://kiwiapps.app/spendah/">
     <link rel="stylesheet" href="../output.css">
