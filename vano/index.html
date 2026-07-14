@@ -41,8 +41,8 @@
         .download:hover { background: var(--aqua); transform: translateY(-1px); }
         .download[aria-disabled="true"] { pointer-events: none; background: #9ca9a4; }
         .download-note { color: var(--muted); font: 400 12px/1.45 "DM Mono", monospace; }
-        .window { overflow: hidden; border: 1px solid rgba(13, 78, 90, .22); border-radius: 10px; background: var(--surface); box-shadow: var(--shadow); transform: rotate(1.5deg); }
-        .window img { display: block; width: 100%; aspect-ratio: 1.76; object-fit: cover; object-position: center; }
+        .window { transform: rotate(1.5deg); }
+        .window img { display: block; width: 100%; mix-blend-mode: multiply; }
         .section { padding: 68px 0; border-top: 1px solid var(--line); }
         .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 28px; }
         h2 { margin-bottom: 0; font-size: clamp(28px, 3vw, 42px); line-height: 1.05; letter-spacing: -0.04em; }
@@ -66,6 +66,17 @@
         .capabilities span { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.22); color: #e5f0ed; font-size: 14px; }
         .capabilities span:nth-child(odd) { padding-right: 15px; }
         .capabilities span:nth-child(even) { padding-left: 15px; border-left: 1px solid rgba(255,255,255,.22); }
+        .showcase-heading { max-width: 690px; margin-bottom: 42px; }
+        .showcase-heading p { margin: 14px 0 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
+        .showcase { display: grid; gap: 52px; }
+        .showcase-item { display: grid; grid-template-columns: minmax(0, 1.38fr) minmax(260px, .62fr); gap: 32px; align-items: center; }
+        .showcase-item.reverse { grid-template-columns: minmax(260px, .62fr) minmax(0, 1.38fr); }
+        .showcase-item.reverse .showcase-copy { order: -1; }
+         .showcase-image { overflow: hidden; border: 1px solid rgba(13, 78, 90, .22); border-radius: 8px; background: var(--surface); box-shadow: var(--shadow); }
+        .showcase-image img { display: block; width: 100%; aspect-ratio: 1.73; object-fit: cover; }
+        .showcase-kicker { margin-bottom: 13px; color: var(--aqua); font: 500 12px/1.2 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+        .showcase-copy h3 { margin-bottom: 12px; font-size: clamp(23px, 2.4vw, 32px); line-height: 1.1; letter-spacing: -0.04em; }
+        .showcase-copy p { margin-bottom: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
         .privacy { max-width: 770px; }
         .privacy p { color: var(--muted); font-size: 15px; line-height: 1.75; }
         .footer { display: flex; justify-content: space-between; gap: 20px; padding: 30px 0 40px; color: var(--muted); font-size: 13px; }
@@ -82,6 +93,9 @@
             .feature { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
             .feature:last-child { border-bottom: 0; }
             .feature-index { margin-bottom: 22px; }
+            .showcase { gap: 40px; }
+            .showcase-item, .showcase-item.reverse { grid-template-columns: 1fr; gap: 20px; }
+            .showcase-item.reverse .showcase-copy { order: 0; }
             .footer { flex-direction: column; }
         }
     </style>
@@ -109,18 +123,6 @@
             </div>
         </header>
 
-        <section class="section" aria-labelledby="listening-title">
-            <div class="section-heading">
-                <h2 id="listening-title">A library that stays in view.</h2>
-                <p>Browse folders, build a playlist, search your collection, and switch between track and album views without interrupting the music.</p>
-            </div>
-            <div class="features">
-                <article class="feature"><span class="feature-index">01</span><h3>Library-first browsing</h3><p>Open a music folder and explore its hierarchy directly from the sidebar. Add albums, files, or whole folders to your playlist.</p></article>
-                <article class="feature"><span class="feature-index">02</span><h3>Playback without friction</h3><p>Queue controls, shuffle, repeat, seeking, volume, and output selection are always within reach without leaving the player.</p></article>
-                <article class="feature"><span class="feature-index">03</span><h3>Everything in context</h3><p>Album art, track metadata, lyrics, favorites, and a full details panel keep your collection readable while you listen.</p></article>
-            </div>
-        </section>
-
         <section class="section" aria-labelledby="formats-title">
             <div class="section-heading">
                 <h2 id="formats-title">Built for varied collections.</h2>
@@ -135,22 +137,32 @@
             </article>
         </section>
 
-        <section class="section" aria-labelledby="sound-title">
-            <div class="detail-grid">
-                <article class="detail-card dark">
-                    <p class="eyebrow" style="color: var(--lime)">Sound control</p>
-                    <h2 id="sound-title">Tune the listening chain.</h2>
-                    <p>A built-in equalizer provides a 10-band manual mode and searchable headphone correction presets. Vano can also match the output device sample rate to the current track and supports exclusive output mode.</p>
-                    <div class="capabilities" aria-label="Audio capabilities">
-                        <span>10-band EQ</span><span>Headphone presets</span>
-                        <span>Auto preamp</span><span>Sample-rate matching</span>
-                        <span>Exclusive mode</span><span>Output device picker</span>
+        <section class="section" aria-labelledby="precision-title">
+            <div class="showcase-heading">
+                <p class="eyebrow">Precision, built in</p>
+                <h2 id="precision-title">Start with settings made for your gear.</h2>
+                <p>Vano pairs detailed playback controls with practical tools for tuning headphones and restoring the context around your music.</p>
+            </div>
+            <div class="showcase">
+                <article class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="headphones.png" alt="Vano equalizer showing a searchable headphone preset library with 8,850 matches">
+                    </div>
+                    <div class="showcase-copy">
+                        <p class="showcase-kicker">Headphone correction</p>
+                        <h3>Thousands of EQ presets, ready to search.</h3>
+                        <p>Choose a measured correction profile for your headphones from a library of thousands of presets. Search by model, brand, or measurement source, then fine-tune the result with Vano's parametric filters and automatic preamp control.</p>
                     </div>
                 </article>
-                <article class="detail-card">
-                    <p class="eyebrow">Organize and enrich</p>
-                    <h3>Metadata tools that respect your files.</h3>
-                    <p>Edit tags and filenames, work with CUE sheets, find release information through MusicBrainz, fetch album art, or open selected files in MusicBrainz Picard. AcoustID identification helps reconnect an unknown file with its proper release.</p>
+                <article class="showcase-item reverse">
+                    <div class="showcase-image">
+                        <img src="musicbrainz.png" alt="Vano MusicBrainz Lookup showing matching releases and tracks for Opeth's Morningrise">
+                    </div>
+                    <div class="showcase-copy">
+                        <p class="showcase-kicker">MusicBrainz lookup</p>
+                        <h3>Reconnect a file with its release.</h3>
+                        <p>Search MusicBrainz from the player to compare matching releases and track lists. Select the right edition, fetch its cover art, and apply accurate tags without leaving your library.</p>
+                    </div>
                 </article>
             </div>
         </section>
