@@ -4,6 +4,17 @@
         <title>Vano Audio Player</title>
         <item>
             <title>1.1</title>
+            <pubDate>Wed, 15 Jul 2026 15:56:56 +1200</pubDate>
+            <sparkle:version>202607151555</sparkle:version>
+            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>27.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://kiwiapps.app/vano/VanoAudioPlayer-1.1.zip" length="12319313" type="application/octet-stream" sparkle:edSignature="zaTyVdh8nlLxn2PtnaKpTYQLBjvcEcKupT+kbopK6IYYqqINk5njuwkkglJZUnwymS51hSAIwQCaIP0wYvQvAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607151555-1.delta" sparkle:deltaFrom="1" length="462738" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ve1wwD8EGzRhMo3gYqfC5lnkzAnYk7TZHi7zeepCxIMr5+a6aH5G+H0usTEb7kc2fTb0HaR9Pj3DuAkKSXAvBQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>1.1</title>
             <pubDate>Tue, 14 Jul 2026 19:58:54 +1200</pubDate>
             <sparkle:version>202607141957</sparkle:version>
             <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
