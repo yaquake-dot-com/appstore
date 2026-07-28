@@ -9,12 +9,6 @@
             <sparkle:shortVersionString>1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>27.0</sparkle:minimumSystemVersion>
             <enclosure url="https://kiwiapps.app/vano/VanoAudioPlayer-1.4.zip" length="14061897" type="application/octet-stream" sparkle:edSignature="YrKbcl5YifDnpKrv+/sg28bSeLEgNS7YFqluq59xgjjYwHyAz+qNDqn8O+3+ZRZ/3+dJwICeRQwLzHE6qFbKDQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607281403-202607191132.delta" sparkle:deltaFrom="202607191132" length="3513814" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YV7ZSsHJccIUEkaQru2mTxVQ3ajPo6NOVzsc3+jIkELWU9ox47aQr27j9A/Y9b8pO9Kr9UX7TygPfW9cCUPJAg=="/>
-                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607281403-202607171733.delta" sparkle:deltaFrom="202607171733" length="5812806" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WioQ+qi4rxbXUQEoOfc/E24MEYASP34KCOD0Y6Zu5yJapsZvv3FuOO/kbdIAFtz203+yzp/4t380cyDYDVqQAg=="/>
-                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607281403-202607151555.delta" sparkle:deltaFrom="202607151555" length="5928222" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YBObcYJMCpdhf66XGm8Im1UiHq9LKqh8EpILGNm6x4A2ywfTwgzhdAe8fGM5BEzltn/QPWIX7Qbadk9lMxUWDw=="/>
-                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607281403-1.delta" sparkle:deltaFrom="1" length="6003694" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="a6yc3lFxB6tcPcceAeZcV9EFX3Xyr5y89cTeRrY0G6277Fg/FoWtVWoUUaDRyo/RKJjuNJY33ftmw8Uo1CggDw=="/>
-            </sparkle:deltas>
         </item>
     </channel>
 </rss>
