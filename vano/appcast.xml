@@ -3,6 +3,20 @@
     <channel>
         <title>Vano Audio Player</title>
         <item>
+            <title>1.5.2</title>
+            <pubDate>Wed, 29 Jul 2026 20:15:01 +1200</pubDate>
+            <sparkle:version>202607292013</sparkle:version>
+            <sparkle:shortVersionString>1.5.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://download.kiwiapps.app/vano/VanoAudioPlayer-1.5.2.zip" length="15733345" type="application/octet-stream" sparkle:edSignature="aEMZfJh9m5LQ+bfPpTwqBUy0PbvgTWmRd7AgZe/jaYX/QDL0bHlv/USfz51BqYCCAR55671Y+1rDa/SE3snBDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player202607292013-202607291950.delta" sparkle:deltaFrom="202607291950" length="369238" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="fasfQm1Pem079gg0iVGYq317JUUgtuEh55aqe6qozsFmjL0nU3kRPq2FG9gQyMINP2GbZUJjWqkmLy+P1ernDA=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player202607292013-202607291819.delta" sparkle:deltaFrom="202607291819" length="403574" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="sBBXfWjRYXF5QuCqRgrPZc4Y1TyHJUZo3VeYYR+ImEqaKmxqJ+x2fVOrDX5W6yssOgzumzzp0ewttPxe4AcMDg=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player202607292013-202607281403.delta" sparkle:deltaFrom="202607281403" length="1790150" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="x16WVPY3kItnAlMt0bfJ0uGmBdid3I/37mELzR4ufqQQBYDvftih/oCVSf7GnRiGrrAPIWEDZm4d2O5ajxIiDQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.5.1</title>
             <pubDate>Wed, 29 Jul 2026 19:52:10 +1200</pubDate>
             <sparkle:version>202607291950</sparkle:version>
