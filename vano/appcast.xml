@@ -9,9 +9,9 @@
             <sparkle:shortVersionString>1.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://kiwiapps.app/vano/VanoAudioPlayer-1.5.zip" length="15715630" type="application/octet-stream" sparkle:edSignature="rXgg8yhasBY9Z5mkKu10aZbZicJKfIZFxyvr3TZY/ClBTF+CNSp/H1eq/n4AVhgrh8cdXe0tgY3DpAZntHGoCQ=="/>
+            <enclosure url="https://download.kiwiapps.app/vano/VanoAudioPlayer-1.5.zip" length="15715630" type="application/octet-stream" sparkle:edSignature="rXgg8yhasBY9Z5mkKu10aZbZicJKfIZFxyvr3TZY/ClBTF+CNSp/H1eq/n4AVhgrh8cdXe0tgY3DpAZntHGoCQ=="/>
             <sparkle:deltas>
-                <enclosure url="https://kiwiapps.app/vano/Vano%20Audio%20Player202607291819-202607281403.delta" sparkle:deltaFrom="202607281403" length="1773842" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JgmO5pasEGuI/ku43HI2o6dJ3/IjtyegMeilKAXz8kp5V5yKdiwHXnuBnoGwAnQf4UKzVe9zentZmj3tkkenCg=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player202607291819-202607281403.delta" sparkle:deltaFrom="202607281403" length="1773842" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="JgmO5pasEGuI/ku43HI2o6dJ3/IjtyegMeilKAXz8kp5V5yKdiwHXnuBnoGwAnQf4UKzVe9zentZmj3tkkenCg=="/>
             </sparkle:deltas>
         </item>
         <item>
@@ -20,7 +20,7 @@
             <sparkle:version>202607281403</sparkle:version>
             <sparkle:shortVersionString>1.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>27.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://kiwiapps.app/vano/VanoAudioPlayer-1.4.zip" length="14061897" type="application/octet-stream" sparkle:edSignature="YrKbcl5YifDnpKrv+/sg28bSeLEgNS7YFqluq59xgjjYwHyAz+qNDqn8O+3+ZRZ/3+dJwICeRQwLzHE6qFbKDQ=="/>
+            <enclosure url="https://download.kiwiapps.app/vano/VanoAudioPlayer-1.4.zip" length="14061897" type="application/octet-stream" sparkle:edSignature="YrKbcl5YifDnpKrv+/sg28bSeLEgNS7YFqluq59xgjjYwHyAz+qNDqn8O+3+ZRZ/3+dJwICeRQwLzHE6qFbKDQ=="/>
         </item>
     </channel>
 </rss>
