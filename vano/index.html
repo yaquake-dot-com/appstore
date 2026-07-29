@@ -200,7 +200,7 @@
                 downloadLink.href = url;
                 downloadLink.removeAttribute('aria-disabled');
                 downloadLink.textContent = release ? `Download Vano ${release}` : 'Download Vano';
-                // downloadNote.textContent = 'macOS 26 and later';
+                downloadNote.textContent = '';
             })
             .catch(() => {
                 downloadLink.textContent = 'Download unavailable';
