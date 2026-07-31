@@ -3,6 +3,22 @@
     <channel>
         <title>Vano Audio Player</title>
         <item>
+            <title>1.6.3</title>
+            <pubDate>Fri, 31 Jul 2026 17:26:46 +1200</pubDate>
+            <sparkle:version>20260731172451</sparkle:version>
+            <sparkle:shortVersionString>1.6.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://download.kiwiapps.app/vano/VanoAudioPlayer-1.6.3.zip" length="17496216" type="application/octet-stream" sparkle:edSignature="JroJIGhCZN5KXdfNrNegZhIAP7l7T4k/7xNzVppW3NDYqgJbEMgFoF0DMrSB8wiS9H3g2ebIL3k2wN5jjQjTDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731172451-20260731165329.delta" sparkle:deltaFrom="20260731165329" length="686302" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="B1slZl9W5yTxIW6xTacTPKS0vkuxsggKWji6yrAWUmwer0K9Kqi1pmrFzHqoaRKjYx5N7dl8B3bQU9pLADYqAg=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731172451-20260731164122.delta" sparkle:deltaFrom="20260731164122" length="687626" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="OVbWwAck2Vh/FF6y//sKWhSuHSuVUDVAuFrITpi4eft33T3aJMBCCHFALXKJdUVbldZKvVKvGpp103wdiiZvDA=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731172451-20260731160811.delta" sparkle:deltaFrom="20260731160811" length="709450" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ELCjeXfihj7KxNqrN1h8C5BoVgrxxH3jkLdxKvEuP76G3VyRg1WhXLQmBLbb9XnWGgqjvpSjIvWS5HTE/9VIBA=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731172451-20260731111449.delta" sparkle:deltaFrom="20260731111449" length="995670" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="W1Ud1Hr6yTEA2CTPD/aNK1eGF7zBr4+TSLa6Uj0nxahjGao+8dkafAibrGleP+885JlhPpNB0XwKxVw9HvXVDA=="/>
+                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731172451-202607300759.delta" sparkle:deltaFrom="202607300759" length="2611514" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="SxmzrNhpJKuY37mrre8eycBTLpp0rYlIYafGcPjqMSmfhnHTH4Vhj1+Y5MlEKl4EUEni6uIMRa27mOYMZNnDCw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>1.6.2.1</title>
             <pubDate>Fri, 31 Jul 2026 16:55:32 +1200</pubDate>
             <sparkle:version>20260731165329</sparkle:version>
@@ -32,22 +48,6 @@
                 <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731164122-202607300759.delta" sparkle:deltaFrom="202607300759" length="2577058" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+dN1l5e/Hkjk+KAGECzu7b8TGLnzHsoRoWVkYAODRT19YX42Zn7jSaQG24J98Vxl3iMmhskYWG4lNzB9Yf4tCQ=="/>
                 <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731164122-202607292114.delta" sparkle:deltaFrom="202607292114" length="2580950" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="P9tK1d2xB2l+ax/y1PPSmgjrs396ddjdRODelmXCaWW3srD/3W/vz5ZWG6FU9/fESy2U1GKb4uiOCbOELejGBg=="/>
                 <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731164122-202607292052.delta" sparkle:deltaFrom="202607292052" length="2600834" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Z91+8hLsurnzOikX+ezYl3brhWltiUWWvbCpkp2pdJ22HKHsTcOsyzDqONwSeYwIvvu+9HClZmIGYSVhM0oMBQ=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>1.6.1</title>
-            <pubDate>Fri, 31 Jul 2026 16:09:58 +1200</pubDate>
-            <sparkle:version>20260731160811</sparkle:version>
-            <sparkle:shortVersionString>1.6.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://download.kiwiapps.app/vano/VanoAudioPlayer-1.6.1.zip" length="17472429" type="application/octet-stream" sparkle:edSignature="bKVC8PfP797+0GEvpPRb/18WvOoP31p6870LlAQ54ztLVRiLJawfU5jaXoRUOWObMTkv4ZLrgUJmhnOWFMURCg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731160811-20260731111449.delta" sparkle:deltaFrom="20260731111449" length="921106" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="uiyr15FtSiNwRfBCdX70JhPNTt3q89q/LHwaWcK1LoVJEwqJBqAflJoEKbm9/SH32tzS89YZWrbleErvLcmrDA=="/>
-                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731160811-202607300759.delta" sparkle:deltaFrom="202607300759" length="2574114" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="MbrZBk61qrW+nb5aI8e3Vu5KaetiX4mOoDUkt0mJ3zhsX8ds4voEuBE0/0k8BTQgT3+BHH97C4JbUt+4BdZaBw=="/>
-                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731160811-202607292114.delta" sparkle:deltaFrom="202607292114" length="2578874" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="N6n6orFOqQjimDNUm7xVPQrBhac5qANdQC+hMHnOu4UsguSNH2CXBuDohSodWcukk3vYvLd3XEYHBdsGnU7aDA=="/>
-                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731160811-202607292052.delta" sparkle:deltaFrom="202607292052" length="2595418" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Snoi48nRg/uReT65Tm/tf8LtER72WJ0LBIYpoHBocWGmovnC1eHOgBkTfg1zMB70/fc2IcpSnK1geSM7IbVPBA=="/>
-                <enclosure url="https://download.kiwiapps.app/vano/Vano%20Audio%20Player20260731160811-202607292013.delta" sparkle:deltaFrom="202607292013" length="2594786" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YKbbPHLWiq2KtQulGgq4JDH/2JZ24Zz9tPsKprtdfPVchGQhK4DktLz+AGS3gB8KMDsvjAy/MZxb7fdCSOXsAQ=="/>
             </sparkle:deltas>
         </item>
         <item>
