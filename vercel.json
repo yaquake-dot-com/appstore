@@ -1,4 +1,9 @@
-
 {
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/vano/appcast.xml",
+      "destination": "https://download.kiwiapps.app/vano/appcast.xml"
+    }
+  ]
 }
