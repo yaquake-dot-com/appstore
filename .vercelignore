@@ -1,6 +1,5 @@
 node_modules
 .git
 .DS_Store
-input.css
 package.json
 package-lock.json
